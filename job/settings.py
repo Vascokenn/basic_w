@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY = 'etdq)uvq=t0rc&ams5_ovn6w8bcwknjj0u97*(#n^(76x*+dr1'
 SECRET_KEY = os.environ.get("SECRET_KEY")
 #ECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False").lower() == True"
+DEBUG = os.environ.get("DEBUG", "False").lower() == "True"
 #DEBUG = True
 #ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split("")
 #ALLOWED_HOSTS = ['*', 'https://66bb-102-211-145-33.ngrok-free.app']
@@ -113,14 +113,14 @@ DATABASES["default"] = dj_database_url.parse("database_url")
 
 
 
-
-
+'''
 #for debug toolbar
 INTERNAL_IPS = [
     # ...
     "127.0.0.1",
     # ...
 ]
+'''
 # CACHES
 # ------------------------------------------------------------------------------
 
