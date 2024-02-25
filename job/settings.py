@@ -22,13 +22,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'etdq)uvq=t0rc&ams5_ovn6w8bcwknjj0u97*(#n^(76x*+dr1'
-#SECRET_KEY = os.environ.get("SECRET_KEY")
-# SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = os.environ.get("DEBUG", "False").lower() == True"
-DEBUG = True
+#SECRET_KEY = 'etdq)uvq=t0rc&ams5_ovn6w8bcwknjj0u97*(#n^(76x*+dr1'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+#ECURITY WARNING: don't run with debug turned on in production!
+DEBUG = os.environ.get("DEBUG", "False").lower() == True"
+#DEBUG = True
 #ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split("")
-ALLOWED_HOSTS = ['*', 'https://66bb-102-211-145-33.ngrok-free.app']
+#ALLOWED_HOSTS = ['*', 'https://66bb-102-211-145-33.ngrok-free.app']
 
 # Application definition
 
@@ -99,17 +99,17 @@ WSGI_APPLICATION = 'job.wsgi.application'
 #         'PORT': '',
 #     }
 # }
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-#database_url = os.environ.get("DATABASE_URL")
- #DATABASES["default"] = dj_database_url.parse("database_url")
+'''
+database_url = os.environ.get("DATABASE_URL")
+DATABASES["default"] = dj_database_url.parse("database_url")
 
-#
 
 
 
